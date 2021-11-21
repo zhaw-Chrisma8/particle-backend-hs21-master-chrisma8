@@ -51,10 +51,10 @@ function updateVariables(data) {
 
         // Oben definierte Styles für Hintergrundfarbe und Breite des Balkens verwenden, um
         // den Progressbar im HTML-Dokument zu aktualisieren
-        document.getElementById("luxlevel-bar").style = colorStyle + widthStyle;
+        document.getElementById("templevel-bar").style = colorStyle + widthStyle;
 
         // Text unterhalb des Balkens aktualisieren
-        document.getElementById("luxlevel-text").innerHTML = lux + " Lux"
+        document.getElementById("templevel-text").innerHTML = temp + "°C"
 
         // Durchschnitt aller bisherigen Messungen berechnen und in 'luxAverage' speichern
         var luxSum = 0;
@@ -68,10 +68,10 @@ function updateVariables(data) {
         var levelAverage = luxAverage * (100 / maxLevel);
         var widthStyleAverage = "width: " + levelAverage + "%;"
         document.getElementById("luxlevel-average-bar").style = widthStyleAverage;
-        document.getElementById("luxlevel-average-text").innerHTML = luxAverage.toFixed(2) + " Lux"; // Auf 2 Nachkommastellen reduzieren
+        document.getElementById("luxlevel-average-text").innerHTML = luxAverage.toFixed(2) + "°C"; // Auf 2 Nachkommastellen reduzieren
 
         // Wert im Chart hinzufügen
-        addData(lux);
+        addData(temp);
     }
 }
 
