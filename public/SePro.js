@@ -57,17 +57,17 @@ async function setCounter() {
 async function gettemperature() {
     // request the variable "counter"
     var response = await axios.get(rootUrl + "/api/device/0/variable/temperature");
-    var temperature = response.data.result;
+    var counter = response.data.result;
 
     // update the html element
-    document.getElementById("temperature").innerHTML = temperature;
+    document.getElementById("temperature").innerHTML = counter;
 }
 
 async function gethumidity() {
     // request the variable "counter"
     var response = await axios.get(rootUrl + "/api/device/0/variable/humidity");
-    var humidity = response.data.result;
+    var counter = response.data.result;
 
     // update the html element
-    document.getElementById("humidity").innerHTML = humidity;
+    document.getElementById("humidity").innerHTML = counter;
 }
