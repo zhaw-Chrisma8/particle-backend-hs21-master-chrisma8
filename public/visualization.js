@@ -37,7 +37,7 @@ function updateVariables(data) {
 
         // Farbe des Balkens abhängig von Level festlegen
         // Liste aller unterstützten Farben: https://www.w3schools.com/cssref/css_colors.asp
-        if (level < 23) {
+        if (temp < 23) {
             color = "Blue";
         } else {
             color = "Orange";
