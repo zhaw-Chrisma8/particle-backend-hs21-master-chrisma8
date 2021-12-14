@@ -8,7 +8,8 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(cors())
 app.use(bodyParser.json()); // support json encoded bodies
-app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'Sensorprojekt')));
+//app.use('/', express.static(path.join(__dirname, 'public'))); Ursprünglicher Root
 const port = process.env.PORT || '3001';
 app.set('port', port);
 const server = http.createServer(app);
