@@ -110,7 +110,7 @@ function drawChart() {
         }
     };
     // LineChart initialisieren
-    chart = new google.visualization.LineChart(document.getElementById('templevel-chart'));
+    chart = new google.visualization.LineChart(document.getElementById('luxlevel-chart'));
     chartData.removeRow(0); // Workaround: ersten (Dummy-)Wert löschen, bevor das Chart zum ersten mal gezeichnet wird.
     chart.draw(chartData, chartOptions); // Chart zeichnen
 }
