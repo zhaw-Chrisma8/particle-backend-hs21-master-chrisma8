@@ -1,56 +1,120 @@
 .u-section-1 .u-sheet-1 {
-  min-height: 750px;
+  min-height: 600px;
 }
 
 .u-section-1 .u-layout-wrap-1 {
-  margin: 65px auto 65px 0;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .u-section-1 .u-layout-cell-1 {
-  min-height: 994px;
+  min-height: 657px;
 }
 
 .u-section-1 .u-container-layout-1 {
-  padding: 30px 32px 30px 28px;
+  padding: 30px;
 }
 
 .u-section-1 .u-custom-html-1 {
+  min-height: 597px;
+  width: 719px;
+  margin: -40px 0 0;
+}
+
+.u-section-1 .u-layout-cell-2 {
+  min-height: 480px;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 30px;
+}
+
+.u-section-1 .u-text-1 {
+  background-image: none;
+  margin: 0;
+}
+
+.u-section-1 .u-image-1 {
+  height: 210px;
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 30px;
 }
 
 @media (max-width: 1199px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 695px;
+    min-height: 505px;
   }
 
   .u-section-1 .u-layout-wrap-1 {
-    margin-right: initial;
-    margin-left: initial;
+    position: relative;
   }
 
   .u-section-1 .u-layout-cell-1 {
-    min-height: 820px;
+    min-height: 542px;
+  }
+
+  .u-section-1 .u-custom-html-1 {
+    height: auto;
+    width: 582px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 396px;
+  }
+
+  .u-section-1 .u-image-1 {
+    height: 169px;
   }
 }
 
 @media (max-width: 991px) {
   .u-section-1 .u-sheet-1 {
-    min-height: 535px;
+    min-height: 275px;
   }
 
   .u-section-1 .u-layout-cell-1 {
     min-height: 100px;
   }
 
-  .u-section-1 .u-container-layout-1 {
-    padding-right: 30px;
+  .u-section-1 .u-custom-html-1 {
+    width: 432px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+
+  .u-section-1 .u-image-1 {
+    height: 124px;
   }
 }
 
 @media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 375px;
+  }
+
   .u-section-1 .u-container-layout-1 {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-image-1 {
+    height: 215px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-custom-html-1 {
+    width: 320px;
+  }
+
+  .u-section-1 .u-image-1 {
+    height: 132px;
   }
 }

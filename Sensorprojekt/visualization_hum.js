@@ -31,7 +31,7 @@ function updateVariables(data) {
         allMeasurements.push(hum);
 
         // Text unterhalb des Balkens aktualisieren
-        document.getElementById("humlevel-text").innerHTML = hum + "°C"
+        document.getElementById("humlevel-text").innerHTML = hum + "%"
 
         // Wert im Chart hinzufügen
         addData(hum);
