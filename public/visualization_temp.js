@@ -14,61 +14,24 @@ function initSSE() {
 }
 initSSE();
 
-
-// Array, in dem alle empfangenen Lux-Werte gespeichert werden.
+// Array, in dem alle empfangenen Temp-Werte gespeichert werden.
 var allMeasurements = [];
 
-// Maximaler Lux Level für die Berechnung des Prozentwerts und als maximaler Wert für das Chart.
-var maxLevel = 50;
+// Maximaler Temp Level für die Berechnung des Prozentwerts und als maximaler Wert für das Chart.
+var maxLevel = 35;
 
 // Diese Funktion wird immer dann ausgeführt, wenn ein neues Event empfangen wird.
 function updateVariables(data) {
 
     if (data.eventName === "Temp:") {
-        // Erhaltenen Wert in der Variable 'lux' speichern
+        // Erhaltenen Wert in der Variable 'temp' speichern
         var temp = Number(data.eventData);
-        //console.log(lux);
-
+        
         // Wert am Ende des Arrays 'allMeasurements' hinzufügen
         allMeasurements.push(temp);
 
-        // Wert in Prozent umrechnen und in 'level' speichern
-        var level = temp * (100 / maxLevel);
-
-        // Farbe des Balkens abhängig von Level festlegen
-        // Liste aller unterstützten Farben: https://www.w3schools.com/cssref/css_colors.asp
-        if (temp < 23) {
-            color = "Blue";
-        } else {
-            color = "Orange";
-        }
-
-        // CSS Style für die Hintergrundfarbe des Balkens
-        var colorStyle = "background-color: " + color + " !important;";
-
-        // CSS Style für die Breite des Balkens in Prozent
-        var widthStyle = "width: " + level + "%;"
-
-        // Oben definierte Styles für Hintergrundfarbe und Breite des Balkens verwenden, um
-        // den Progressbar im HTML-Dokument zu aktualisieren
-        document.getElementById("templevel-bar").style = colorStyle + widthStyle;
-
         // Text unterhalb des Balkens aktualisieren
         document.getElementById("templevel-text").innerHTML = temp + "°C"
-
-        // Durchschnitt aller bisherigen Messungen berechnen und in 'luxAverage' speichern
-        var luxSum = 0;
-        for (var measurement of allMeasurements) {
-            luxSum = luxSum + measurement;
-        }
-        var luxAverage = luxSum / allMeasurements.length;
-        //console.log(luxAverage);
-
-        // Durchschnittlichen Lux-Wert in Prozent umrechnen und als Balken und Text anzeigen
-        var levelAverage = luxAverage * (100 / maxLevel);
-        var widthStyleAverage = "width: " + levelAverage + "%;"
-        document.getElementById("luxlevel-average-bar").style = widthStyleAverage;
-        document.getElementById("luxlevel-average-text").innerHTML = luxAverage.toFixed(2) + "°C"; // Auf 2 Nachkommastellen reduzieren
 
         // Wert im Chart hinzufügen
         addData(temp);
